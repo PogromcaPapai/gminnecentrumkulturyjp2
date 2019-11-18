@@ -1,13 +1,12 @@
 from django import forms
-import models
+
+from .models import User
 
 class Register(forms.ModelForm):
     class Meta:
-        model = models.User
+        model = User
         fields = ("username", "password", "email")
 
 class Reserve(forms.Form):
-    seat = forms.IntegerField(widget=forms.HiddenInput())
-    event = forms.CharField(max_length=100, widget=forms.HiddenInput())
-    username = forms.CharField(max_length=20)
-    password = forms.CharField(max_length=100)
+    username = forms.CharField(label='Nazwa użytkownika', max_length=20)
+    password = forms.CharField(label='Hasło', max_length=100)

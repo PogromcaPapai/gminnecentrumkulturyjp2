@@ -1,7 +1,5 @@
-{% extends 'base.html' %}
-
-{% block content %}
-    <h1>About</h1>
-
-    <p>Example information</p>
-{% endblock %}
+<form action="/reserve/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
