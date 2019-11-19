@@ -23,7 +23,8 @@ class User(models.Model):
 class Reservation(models.Model):
     event = models.ForeignKey(Show, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    seat = models.IntegerField()
+    row = models.IntegerField()
+    column = models.IntegerField()
 
     objects = models.Manager()
     def __str__(self):

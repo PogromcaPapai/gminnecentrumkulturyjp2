@@ -6,6 +6,7 @@ from uploads.core import views
 
 urlpatterns = [
     url('^$', views.home, name='home'), 
-    url('reserve/', views.reservation, name='reserve'),
-    url('register/', views.register, name='registration'),
+    url('register/', views.register, name='register'),
+    url('show/<int:show>/<int:place>/', views.reservation, name='registration'),
+    url('show/<int:show>/', views.showplaces, name='show_data')
 ]
