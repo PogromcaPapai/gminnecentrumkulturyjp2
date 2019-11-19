@@ -10,8 +10,6 @@ class Show(models.Model):
     hour = models.IntegerField()
 
     objects = models.Manager()
-    def __str__(self):
-        return self.name
 
 class User(models.Model):
     username = models.CharField(max_length=20)
@@ -27,5 +25,3 @@ class Reservation(models.Model):
     column = models.IntegerField()
 
     objects = models.Manager()
-    def __str__(self):
-        return self.event+' | '+self.seat

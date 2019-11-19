@@ -8,5 +8,6 @@ urlpatterns = [
     url('^$', views.home, name='home'), 
     url('register/', views.register, name='register'),
     url('show/<int:show>/<int:place>/', views.reservation, name='registration'),
-    url('show/<int:show>/', views.showplaces, name='show_data')
+    url('show/<int:show>/', views.showdetails, name='details'),
+    url('show/', views.showlist, name='show_shows')
 ]

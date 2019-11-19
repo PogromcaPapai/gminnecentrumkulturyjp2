@@ -8,7 +8,6 @@ from .forms import Reserve, Register
 def home(request):
     return render(request, 'home.html')
 
-
 def register(request):
     if request.method == 'POST':
         form = Register(request.POST)
@@ -28,10 +27,9 @@ def register(request):
 
 def showlist(request):
     events = Show.objects.all()
-    return render(request, 'event_list.html')
+    return render(request, 'event_list.html', {'events':events})
 
-
-def showplaces(request, show_id):
+def showdetails(request, show_id):
     show = Show.objects(id_=int(show_id))
     if len(show)==1:
         reserved = Reservation.objects(event=show)
