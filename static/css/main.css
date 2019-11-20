@@ -1,4 +1,4 @@
-.fajne{float:left;
+.fajne{display: inline-block;;
   color: #4F2537;
 margin:35px;
 text-align:center;
@@ -6,31 +6,26 @@ padding:10px;}
 
 .fajne:hover {color: #2E1620;}
 
-#tlowok {background-image: url("../img/papaj.jpg");
-height: 500px;
-padding: 10px;
-background-position: top;
-background-repeat: space;
-background-size: contain;
-text-align: center;
-background-color: #576878;
-
+body {
+  background-image: url('tlo.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
-
-body {background-color: #576878;}
-#kontener {width: 1200px;
+#kontener {width: 600px;
 margin:auto;
 font-family:Times;
 color: #4F2537;
-font-size: 18px;
+font-size: 15px;
 font-weight: 800;}
 
 #naglowek{height:100px;
-background-color: #3C5361;
+background-color: rgba(98, 153, 187, 0.432);
 text-align:center;
 padding-top:10px;
 padding-bottom:10px;
-font-size:25px;
+font-size:20px;
 border-bottom-right-radius:20px;
 border-bottom-left-radius:20px;
 border-top-right-radius:20px;
@@ -39,14 +34,7 @@ border-top-left-radius:20px;
 
 .zawartosc {height: 500px;
 padding: 10px;
-text-align: center;
-background-color: #576878;
-
-#stopka{height:100px;
-background-color: #576878;
-padding: 20px;
-text-align:center;
-float:center;}
+text-align: center;}
 
 a:visited{color:#BF9B45;
 text-decoration: none;}

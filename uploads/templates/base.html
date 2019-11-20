@@ -7,22 +7,18 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
   </head>
   <body>
-    <div id = "kontener">
     <div id = "naglowek">
   <a href="{% url 'home' %}"><h5 class = "fajne">STRONA GŁÓWNA</h5></a>
-  <a href="{% url 'data_analysis' %}"><h5 class = "fajne">REZERWACJA MIEJSC NA WYDARZENIA</h5></a>
+  <a href="{% url 'event_list' %}"><h5 class = "fajne">WYDARZENIA</h5></a>
+  <a href="{% url 'register' %}"><h5 class = "fajne">ZAREJESTRUJ SIĘ</h5></a>
   <a href="{% url 'about' %}"><h5 class = "fajne">O WOK J.P.2</h5></a>
   <a href="{% url 'contact' %}"><h5 class = "fajne">KONTAKT</h5></a>
-    </div>
-
+  </div>
+  <div id = "kontener">
   <div class = "zawartosc">
     {% block content %}
     {% endblock %}
-</div>
-
-    <div id = "stopka">
-      <p><center><br/>Syn Starosty powiatowego Jakub Dakowski i jego koleżanka Natalia Majda</center></p>
-    </div>
+  </div>
   </div>
   </body>
 </html>
