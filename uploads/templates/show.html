@@ -1,7 +1,31 @@
 {% extends 'base.html' %}
 
+{% load index %}
 {% block content %}
-    <h1>Data analysis with Python</h1>
+{% load static %}
+    <h1>{{ show.name }}</h1>
+    <h2>{{ show.date }} o godzinie {{ show.hour }}:00</h2>
+    <h3>Opis wydarzenia:</h3>
+    <p>{{ show.description }}</p>
+    <h3>Zapisy:</h3>
+    <p>Prosimy kliknąć na wybrane miejsce:</p>
+    <h1>SCENA</h1>
+    <center>
+    <table> 
+    {% for i in range %}
+    <tr>
+    {% for j in range %}
+    <td><a href="{% url 'reserve' show.id i j %}">
+        {% if room|index:i|index:j %}
+            <img src="{% static 'img/zaj.png' %}" alt="Z">
+        {% elif room|index:i|index:j == False%}
+            <img src="{% static 'img/wol.png' %}" alt="W">
+        {% endif %}
+    </a></td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+    </table> </center>
 
-    <p>Welcome, choose an option from menu</p>
+    
 {% endblock %}
